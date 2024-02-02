@@ -15,7 +15,16 @@ public class HlavniProgram {
     zofka = new Turtle();
 
     //TODO implementace domácího úkolu
+
+
   nakresliPrasatko();
+  zofka.move(250);
+  zofka.turnRight(90);
+  zofka.move(200);
+  zofka.turnLeft(90);
+  nakresliSlunicko();
+
+
   }
     public void praseciNozicky(){
     zofka.turnRight(30);
@@ -30,9 +39,10 @@ public class HlavniProgram {
 
   public void nakresliPrasatko() {
     zofka.penUp();
-    zofka.move(40);
     zofka.turnRight(180);
+    zofka.move(100);
     zofka.setPenColor(new Color(220, 121, 151));
+    zofka.move(100);
     zofka.penDown();
     praseciNozicky();
     zofka.turnRight(90);
@@ -52,9 +62,36 @@ public class HlavniProgram {
     zofka.move(((double) 100/2*Math.sqrt(2)));
     zofka.turnRight(90);
     zofka.move(((double) 100/2*Math.sqrt(2)));
+    zofka.penUp();
+    zofka.turnLeft(45);
   }
 
+  public void nakresliSlunicko(){
+    zofka.setPenColor(new Color(250, 230, 6));
+    zofka.penDown();
+    for (int i = 0; i < 7; i++) {
+      zofka.move(9);
+      zofka.turnLeft(90);
+      zofka.move(55);
+      zofka.turnLeft(180);
+      zofka.move(55);
+      zofka.turnLeft(90);
+      zofka.move(9);
+      zofka.turnRight(25);
+      zofka.move(9);
+      zofka.turnLeft(90);
+      zofka.move(30);
+      zofka.turnLeft(180);
+      zofka.move(30);
+      zofka.turnLeft(90);
+      zofka.move(9);
+      zofka.turnRight(25);
+    }
+    zofka.penUp();
+    zofka.turnLeft(170);
+    zofka.move(100);
 
+  }
 
 
 
